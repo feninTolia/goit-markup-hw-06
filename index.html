@@ -483,6 +483,44 @@
             <use href="./images/symbol-defs.svg#close"></use>
           </svg>
         </button>
+
+        <form name="callback-form">
+          <h2 class="callback-form__title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+
+          <div class="callback-form__item">
+            <label class="callback-form__label" for="username">Имя</label>
+            <input type="text" name="username" id="username" />
+          </div>
+
+          <div class="callback-form__item">
+            <label class="callback-form__label" for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+
+          <div class="callback-form__item">
+            <label class="callback-form__label" for="mail">Почта</label>
+            <input type="email" name="mail" id="mail" />
+          </div>
+
+          <div class="callback-form__item">
+            <label class="callback-form__label" for="comment"
+              >Комментарий</label
+            >
+            <textarea name="comment" id="comment" rows="5"></textarea>
+          </div>
+
+          <div class="callback-form__item">
+            <input type="checkbox" name="policy" value="policy" id="policy" />
+            <label class="callback-form__label" for="policy"
+              >Соглашаюсь с рассылкой и принимаю
+              <a href="#">Условия договора</a></label
+            >
+          </div>
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
