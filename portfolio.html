@@ -321,7 +321,7 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="container container-flex">
+      <div class="container container-flex container-footer">
         <!-- logo-footer -->
         <div class="address-wrapper">
           <a class="logo logo--footer" href="/"
@@ -358,6 +358,8 @@
             </ul>
           </address>
         </div>
+
+        <!-- join -->
         <div class="join">
           <b class="join__title">ПРИСОЕДИНЯЙТЕСЬ</b>
           <ul class="socials socials--footer list">
@@ -391,6 +393,26 @@
             </li>
           </ul>
         </div>
+
+        <!-- subscribe -->
+        <form class="subscribe">
+          <b class="join__title subscribe-title">Подпишитесь на рассылку</b>
+          <label class="visually-hidden" for="subscribe_mail">E-mail</label>
+          <input
+            class="subscribe__input"
+            name="subscribe_mail"
+            id="subscribe_mail"
+            type="email"
+            required
+            placeholder="E-mail"
+          />
+          <button class="button button--primary subscribe-button" type="submit">
+            Подписаться
+            <svg class="subscribe-button__icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#plane"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
   </body>
