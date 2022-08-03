@@ -228,6 +228,7 @@ h3 {
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
+
   cursor: pointer;
 
   opacity: 0;
@@ -239,7 +240,7 @@ h3 {
 }
 
 .policy-checkbox__input:focus-visible ~ .callback-form__check-icon {
-  outline: 2px solid blue;
+  outline: 2px solid rgba(5, 34, 195, 0.7);
   outline-offset: 1px;
 }
 
@@ -248,7 +249,7 @@ h3 {
 }
 
 .policy-checkbox__input:focus-visible ~ .callback-form__uncheck-icon {
-  outline: 2px solid blue;
+  outline: 2px solid rgb(5, 34, 195, 0.7);
   outline-offset: 1px;
 }
 
@@ -262,10 +263,44 @@ h3 {
 }
 
 .policy-checkbox__link {
+  position: relative;
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid var(--accent-color);
+  color: var(--accent-color);
   font-size: 14px;
   line-height: 1.71;
-  color: var(--accent-color);
+  text-decoration: none;
+
+  transition: color var(--timing-function);
 }
+
+.policy-checkbox__link:hover,
+.policy-checkbox__link:focus {
+  color: var(--secondary-text-color);
+}
+
+.policy-checkbox__link:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+
+  display: block;
+  width: 100%;
+  height: 5px;
+
+  background-color: var(--main-white-color);
+  transform-origin: center;
+  transform: scale(1);
+  transition: transform var(--timing-function);
+}
+
+.policy-checkbox__link:hover:before,
+.policy-checkbox__link:focus:before {
+  transform: scale(0);
+}
+
 /* -buttons */
 .button {
   display: inline-block;
@@ -338,6 +373,7 @@ h3 {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
+  cursor: pointer;
 
   transition: fill var(--timing-function);
 }
@@ -615,6 +651,9 @@ h3 {
   right: 0;
   width: 100%;
   height: 70px;
+
+  font-size: 14px;
+  line-height: 1.14;
 
   align-items: center;
   justify-content: center;
