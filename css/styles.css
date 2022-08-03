@@ -220,6 +220,9 @@ h3 {
   transform: translateY(-50%);
   cursor: pointer;
 
+  width: 16px;
+  height: 15px;
+
   transition: opacity var(--timing-function);
 }
 
@@ -228,6 +231,9 @@ h3 {
   top: 50%;
   left: 14px;
   transform: translateY(-50%);
+
+  width: 16px;
+  height: 15px;
 
   cursor: pointer;
 
